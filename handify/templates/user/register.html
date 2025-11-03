@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .column{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="column">
+            <input type="text" name="Name" placeholder="Name">
+            <input type="text" name="Email" placeholder="Email">
+        </div><br>
+        <div class="column">
+        <select name="Gender">
+            <option value="">--select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+        </select>
+        <input type="text" name="Age" placeholder="Age"><br>
+        </div><br>
+        <input type="text" name="uname" placeholder="User Name"><br>
+        <div class="column">
+            <input type="password" name="passw" placeholder="Password">
+            <input type="password" placeholder="Confirm password">
+        </div><br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

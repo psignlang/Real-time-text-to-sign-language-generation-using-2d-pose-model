@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+  <style>
+    .stars input {
+      display: none;
+    }
+
+    .stars label {
+      font-size: 30px;
+      color: grey;
+      cursor: pointer;
+    }
+
+    .stars input:checked ~ label {
+      color: gold;
+    }
+
+    .stars {
+      display: inline-flex;
+      direction: rtl;
+    }
+
+    textarea {
+      display: block;
+      margin-top: 10px;
+      width: 250px;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h4>Rate your experience</h4>
+
+    <form method="POST" action="">
+      {% csrf_token %}
+      <div class="stars">
+        <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+        <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+        <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+        <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+        <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+      </div>
+      <br><br>
+      <textarea name="feedback" placeholder="Enter your feedback..."></textarea>
+      <br><br>
+      <button type="submit">SUBMIT</button>
+    </form>
+  </center>
+</body>
+</html>

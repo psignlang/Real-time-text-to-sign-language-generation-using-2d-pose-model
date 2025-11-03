@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email id</th>
+            <th>complaint</th>
+            <th>Reply</th>
+        </tr>
+        {%for i in obj %}
+        <tr>
+            <td>{{i.USERID.Name}}</td>
+            <td>{{i.USERID.Email}}</td>
+            <td>{{i.Complaints}}</td>
+            <td class="px-4 py-3 text-center" colspan="2">
+                {%if i.Reply%}
+                    <span class="text-emerald-700 font-median">{{ i.Reply }}</span>
+                {% else %}
+                    <form method="post" action="CompReply/{{ i.id }}"
+                        class="flex flex-col sm:flex-row items-center gap-2 justify-center">
+                    {% csrf_token %}
+                    <input type="text" 
+                           name="Reply" 
+                           required    
+                           placeholder="Enter Reply..."
+                           class="border border-emerald-300 bg-emerald-50 rounded-lg px-3 py-2 w-full sm:w-48
+                                focus:ring-2 focus:ring-emerald-500 focus:border-emerald-400 focus:outline-none">
+                    <input type="submit"
+                            value="send"
+                            class="bg-emerald-600 text-white px-4 py-2 rounded-lg shadow-sm
+                                    hover:bg-emerald-700 hover:shadow-md transition duration-200 cursor-pointer">
+                    </form>
+                {% endif %}    
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
