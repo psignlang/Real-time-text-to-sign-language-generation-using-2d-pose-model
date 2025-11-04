@@ -1,13 +1,18 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
 <body>
-    <a href="/complaints">view complaints</a>
-    <a href="/viewuser">view users</a>
-    <a href="/feedback">view feedback</a>
+    <div class="bg" >
+    <div class="sidebar">
+    <a href="/complaints">complaints</a>
+    <a href="/viewuser">users</a>
+    <a href="/feedback">feedback</a>
+    </div>
+    </div>
 </body>
 </html>
