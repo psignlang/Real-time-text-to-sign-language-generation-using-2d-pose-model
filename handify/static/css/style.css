@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
-    background-color: #10550abe;
+    background-color: #96c492c9;
 }
 .sidebar{
     width: 100px;
@@ -31,7 +31,7 @@
 
 }
 .sidebar a:hover{
-    background-color: rgba(127, 255, 212, 0.481);
+    background-color: rgba(174, 233, 213, 0.481);
 
 }
 .table{
@@ -51,5 +51,5 @@
 th,td{
     text-align: left;
     padding: 10px;
-     border-left: 1px solid black;
+    border-left: 2px solid black;
 }
