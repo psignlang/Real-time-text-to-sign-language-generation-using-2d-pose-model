@@ -53,3 +53,162 @@ th,td{
     padding: 10px;
     border-left: 2px solid black;
 }
+/* .align{
+    text-align: left;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 20px;
+    background-color: white;
+    border: 20px solid white;
+    border-radius: 10px;
+    background-blend-mode:normal;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+.align form{
+    display: flex;
+    flex-direction: column;
+}
+.align input{
+    font-size: 20px;
+}
+.align h1{
+    color: rgb(22, 107, 172);
+}
+.align input,.align button{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    
+}
+.align button{
+    background-color: rgb(83, 83, 205);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.align button:hover{
+    background-color: rgba(6, 52, 98, 0.986);
+}
+.align p{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.align a{
+    color: rgb(108, 108, 223);
+    text-decoration: none;
+}
+.align a:hover{
+    text-decoration: underline;
+} */
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.bg {
+    background: linear-gradient(135deg, #e3f2fd, #90caf9);
+    height: 100vh;
+    position: relative;
+}
+
+/* Center Logo */
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.logo {
+    width: 250px;
+    height: 250px;
+}
+
+/* Fade-out animation for logo */
+.fade-out {
+    opacity: 0;
+    transform: translate(-50%, -70%);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Hide login initially */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Fade-in animation for login form */
+.fade-in {
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Login form box */
+.align {
+    text-align: left;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 20px;
+    background-color: white;
+    border: 20px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Input styling */
+.align form {
+    display: flex;
+    flex-direction: column;
+}
+.align input {
+    font-size: 18px;
+}
+.align h1 {
+    color: rgb(22, 107, 172);
+}
+.align input, .align button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid white;
+}
+.align button {
+    background-color: rgb(83, 83, 205);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.align button:hover {
+    background-color: rgba(6, 52, 98, 0.986);
+}
+.align p {
+    color: rgb(0, 0, 0);
+}
+.align a {
+    color: rgb(108, 108, 223);
+    text-decoration: none;
+}
+.align a:hover {
+    text-decoration: underline;
+}

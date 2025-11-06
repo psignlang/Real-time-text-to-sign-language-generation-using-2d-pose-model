@@ -1,4 +1,4 @@
-{% load static %}
+<!-- {% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,17 +7,70 @@
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
 <body>
-    <center>
+    <div class="bg">
+    <div class="align">
     <form action=""  method="POST">
         {% csrf_token %}
+        <center><h1>LOGIN</h1></center>
         <input type="text" name="Username" placeholder="username">
         <br>
         <input type="password" name="Password" placeholder="password">
         <br>
-        <a href="">forget password</a><br>
         <button type="submit">Login</button><br>
-        <a href="register">Register</a>
+        <a href="">forget password</a><br>
     </form>
-    </center>
+    <p>Don't have an account? <a href="register">Sign Up</a></p>
+    </div>
+    </div>
+</body>
+</html> -->
+
+
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="bg">
+
+   {% load static %}
+
+<div class="logo-container">
+    <img src="{% static 'img/handifylogo.png' %}" alt="Handify Logo" class="logo">
+
+</div>
+
+
+        <!-- Login Form -->
+        <div class="align hidden" id="login-box">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <center><h1>LOGIN</h1></center>
+                <input type="text" name="Username" placeholder="username">
+                <br>
+                <input type="password" name="Password" placeholder="password">
+                <br>
+                <button type="submit">Login</button><br>
+                <a href="">forget password</a><br>
+            </form>
+            <p>Don't have an account? <a href="register">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Wait 2 seconds, then fade in the login box
+        window.addEventListener("load", function() {
+            setTimeout(() => {
+                document.querySelector('.logo-container').classList.add('fade-out');
+                document.querySelector('#login-box').classList.remove('hidden');
+                document.querySelector('#login-box').classList.add('fade-in');
+            }, 800);
+        });
+    </script>
 </body>
 </html>
